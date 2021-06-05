@@ -51,10 +51,10 @@ function scr_dialogue_start( _filename ) {
 	obj_dialogue.textspew = "";
 	obj_dialogue.texttarget = "";
 	obj_dialogue.actor_left = "";
-	obj_dialogue.actor_left_emote = 0;
+	obj_dialogue.actor_left_emote = EMOTE_NEUTRAL;
 	obj_dialogue.actor_right = "";
-	obj_dialogue.actor_right_emote = 0;
+	obj_dialogue.actor_right_emote = EMOTE_NEUTRAL;
 	obj_dialogue.spewlength = 0;
-	obj_dialogue.last_active = 0;
-	obj_dialogue.text_advance_ready = -1;
+	obj_dialogue.last_active = LEFT;
+	obj_dialogue.text_advance_ready = TEXT_LOADING;
 }

@@ -12,7 +12,7 @@ if (dialogue_mode) {
 	
 //TODO: Draw current active character's name
 	draw_set_alpha(1);
-	if ( last_active == 0 ) {
+	if ( last_active == LEFT ) {
 		draw_set_alpha(.5);		
 	}
 	draw_set_halign( fa_right );
@@ -20,7 +20,7 @@ if (dialogue_mode) {
 	draw_set_halign( fa_left );
 	
 	draw_set_alpha(1);
-	if ( last_active == 1 ) {
+	if ( last_active == RIGHT ) {
 		draw_set_alpha(.5);
 	}
 	draw_text( 128, 640, actor_left );
@@ -31,7 +31,7 @@ if (dialogue_mode) {
 	draw_text( 128, 480, textspew );
 	
 //TODO: If the current text has reached completion, draw an arrow in the corner
-	if (text_advance_ready == 1) {
+	if (text_advance_ready == TEXT_READY) {
 		loopdoop++;
 		draw_sprite( spr_text_arrow, round((loopdoop % 160) / 20), 1088, 608 ); 
 	}

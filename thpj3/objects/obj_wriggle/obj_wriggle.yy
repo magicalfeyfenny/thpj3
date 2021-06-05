@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_text_box",
-    "path": "sprites/spr_text_box/spr_text_box.yy",
+    "name": "spr_wriggle",
+    "path": "sprites/spr_wriggle/spr_wriggle.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,18 +21,18 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "dialogue",
-    "path": "folders/dialogue.yy",
+    "name": "thpj3",
+    "path": "thpj3.yyp",
   },
   "resourceVersion": "1.0",
-  "name": "obj_dialogue",
+  "name": "obj_wriggle",
   "tags": [],
   "resourceType": "GMObject",
 }
