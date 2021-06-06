@@ -10,9 +10,14 @@
 #macro EMOTE_CONFUSED 3
 #macro EMOTE_ANGRY 4
 #macro EMOTE_OUCH 5
+#macro LEFT_ACTOR 0
+#macro RIGHT_ACTOR 1
 
-#macro LEFT 0
+
+#macro LEFT -1
 #macro RIGHT 1
+#macro TOP -1
+#macro BOTTOM 1
 #macro LIVES_INIT 3
 #macro LIVES_MAX 5
 #macro BOMBS_INIT 3
@@ -33,6 +38,10 @@
 #macro BOUNDARY_RIGHT 1248
 #macro BOUNDARY_TOP 32
 #macro BOUNDARY_BOTTOM 688
+
+#macro OPTION_FORWARD 100
+#macro OPTION_SIDE_UNFOC 100
+#macro OPTION_SIDE_FOCUS 20
 
 
 

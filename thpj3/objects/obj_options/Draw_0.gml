@@ -1,0 +1,1 @@
+draw_sprite_ext( spr_options, image_index, x, y, obj_wriggle.face_dir, 1, 0, c_white, .75 );

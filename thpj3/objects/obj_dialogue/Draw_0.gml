@@ -12,7 +12,7 @@ if (dialogue_mode) {
 	
 //TODO: Draw current active character's name
 	draw_set_alpha(1);
-	if ( last_active == LEFT ) {
+	if ( last_active == LEFT_ACTOR ) {
 		draw_set_alpha(.5);		
 	}
 	draw_set_halign( fa_right );
@@ -20,7 +20,7 @@ if (dialogue_mode) {
 	draw_set_halign( fa_left );
 	
 	draw_set_alpha(1);
-	if ( last_active == RIGHT ) {
+	if ( last_active == RIGHT_ACTOR ) {
 		draw_set_alpha(.5);
 	}
 	draw_text( 128, 640, actor_left );

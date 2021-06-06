@@ -7,7 +7,7 @@ actor_left = "";
 actor_left_emote = EMOTE_NEUTRAL;
 actor_right = "";
 actor_right_emote = EMOTE_NEUTRAL;
-last_active = LEFT;
+last_active = LEFT_ACTOR;
 text_advance_ready = TEXT_LOADING;
 
 name_test = ds_queue_create();
