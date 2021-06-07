@@ -4,6 +4,7 @@ invuln--;
 recovery--;
 emergency--;
 hyper_time--;
+shoot_delay--;
 h_move = 0;
 v_move = 0;
 
@@ -107,6 +108,42 @@ if ( !emergency && !recovery ) {
 		face_dir = RIGHT;
 	}
 	if ( input_shot_left || input_shot_right ) {
-//TODO: shoot in facing direction
+		if ( shoot_delay <= 0 ) {
+			shoot_delay = SHOT_DELAY;
+			var shooty = instance_create_layer( x + (face_dir * 10), y + (TOP * 10), "Instances", obj_player_shot);
+			with (shooty) {
+				face_dir = other.face_dir;
+				damage = SHOT_PLAYER_DAMAGE;
+				speed = SHOT_PLAYER_SPEED;
+				direction = 270 + (90 * face_dir);
+				image_angle = direction;
+			}
+			var shooty = instance_create_layer( x + (face_dir * 10), y + (BOTTOM * 10), "Instances", obj_player_shot);
+			with (shooty) {
+				face_dir = other.face_dir;
+				damage = SHOT_PLAYER_DAMAGE;
+				speed = SHOT_PLAYER_SPEED;
+				direction = 270 + (90 * face_dir);
+				image_angle = direction;
+			}
+			for (var i = 0; i < 40; i += 10) {
+				var shotia = instance_create_layer( top_option.x, top_option.y, "Instances", obj_option_shot);
+				with (shotia) {
+					face_dir = other.face_dir;
+					damage = SHOT_OPTION_DAMAGE;
+					speed = SHOT_OPTION_SPEED;
+					direction = point_direction( other.x, other.y, other.top_option.x, other.top_option.y ) - (i * face_dir);
+					image_angle = direction;
+				}
+				var shotia = instance_create_layer( bottom_option.x, bottom_option.y, "Instances", obj_option_shot);
+				with (shotia) {
+					face_dir = other.face_dir;
+					damage = SHOT_OPTION_DAMAGE;
+					speed = SHOT_OPTION_SPEED;
+					direction = point_direction( other.x, other.y, other.bottom_option.x, other.bottom_option.y ) + (i * face_dir);
+					image_angle = direction;
+				}
+			}
+		}
 	}
 }

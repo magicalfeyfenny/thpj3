@@ -13,13 +13,14 @@ hyper_time = 0;
 hyper_tier = 0;
 h_move = 0;
 v_move = 0;
+shoot_delay = 0;
 
-var top_option = instance_create_layer(x,y,"Instances", obj_options);
+top_option = instance_create_layer(x,y,"Instances", obj_options);
 with (top_option) {
 	side_modifier = TOP;
 }
 
-var bottom_option = instance_create_layer(x,y,"Instances", obj_options);
+bottom_option = instance_create_layer(x,y,"Instances", obj_options);
 with (bottom_option) {
 	side_modifier = BOTTOM;
 }

@@ -13,6 +13,10 @@
 #macro LEFT_ACTOR 0
 #macro RIGHT_ACTOR 1
 
+#macro BOUNDARY_LEFT 32
+#macro BOUNDARY_RIGHT 1248
+#macro BOUNDARY_TOP 32
+#macro BOUNDARY_BOTTOM 688
 
 #macro LEFT -1
 #macro RIGHT 1
@@ -34,16 +38,15 @@
 #macro HYPER_TIER_2 2
 #macro HYPER_TIER_3 3
 
-#macro BOUNDARY_LEFT 32
-#macro BOUNDARY_RIGHT 1248
-#macro BOUNDARY_TOP 32
-#macro BOUNDARY_BOTTOM 688
-
 #macro OPTION_FORWARD 100
 #macro OPTION_SIDE_UNFOC 100
 #macro OPTION_SIDE_FOCUS 20
 
-
+#macro SHOT_DELAY 3
+#macro SHOT_PLAYER_DAMAGE 5
+#macro SHOT_PLAYER_SPEED 20
+#macro SHOT_OPTION_DAMAGE 1
+#macro SHOT_OPTION_SPEED 20
 
 function scr_initialize() {
 	randomize();
