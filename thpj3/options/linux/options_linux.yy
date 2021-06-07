@@ -1,5 +1,5 @@
 {
-  "option_linux_display_name": "wriggle's imperishable night [preview]",
+  "option_linux_display_name": "wriggle's unwriggleable night [preview]",
   "option_linux_version": "1.0.0.0",
   "option_linux_maintainer_email": "jmhogueison@outlook.com",
   "option_linux_homepage": "https://git.fenny.space/magicalfeyfenny/touhou-pride-jam-2021",

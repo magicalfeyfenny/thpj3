@@ -17,6 +17,8 @@
 #macro BOUNDARY_RIGHT 1248
 #macro BOUNDARY_TOP 32
 #macro BOUNDARY_BOTTOM 688
+#macro SPAWN_X 120
+#macro SPAWN_Y 360
 
 #macro LEFT -1
 #macro RIGHT 1
@@ -29,6 +31,9 @@
 #macro HYPER_INIT 0
 #macro HYPER_COST 100
 #macro HYPER_MAX 300
+#macro DEATHBOMB_WINDOW 15
+#macro RESPAWN_TIMER 60
+#macro RESPAWN_INVULN 120
 
 #macro FOCUS_SPEED 2
 #macro UNFOC_SPEED 5

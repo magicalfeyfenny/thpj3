@@ -1,12 +1,13 @@
 hitbox_rotator++;
 bombing--;
-invuln--;
 recovery--;
+respawn--;
 emergency--;
 hyper_time--;
 shoot_delay--;
 h_move = 0;
 v_move = 0;
+hyper_current += .02;
 
 input_up = keyboard_check( vk_up );
 input_down = keyboard_check( vk_down );
@@ -17,12 +18,38 @@ input_shot_right = keyboard_check( ord( "C" ) );
 input_focus = keyboard_check( vk_shift );
 input_bomb = keyboard_check_pressed( ord("X") );
 
+//limiters and resets
 if ( hyper_time <= 0 ) {
 	hyper_tier = HYPER_INACTIVE;
 }
+if ( lives_current > LIVES_MAX ) {
+	lives_current = LIVES_MAX;
+}
+if ( bombs_current > BOMBS_MAX ) {
+	bombs_current = BOMBS_MAX;
+}
+if ( hyper_current > HYPER_MAX ) {
+	hyper_current = HYPER_MAX;
+}
+if ( emergency == 0 ) {
+	lives_current -= 1;
+	respawn = RESPAWN_TIMER;
+	x = SPAWN_X;
+	y = SPAWN_Y;
+}
+if ( respawn == 0 ) {
+	recovery = RESPAWN_INVULN;
+}
+
+//invuln logic
+if ( bombing || recovery || emergency || respawn || obj_dialogue.dialogue_mode ) {
+	invuln = true;
+} else {
+	invuln = false;
+}
 
 //bomb logic
-if ( input_bomb && !bombing && !recovery) {
+if ( input_bomb && !bombing && !recovery && !respawn ) {
 	//death bomb	
 	if ( emergency ) {
 		if ( hyper_current >= HYPER_COST && hyper_tier == HYPER_INACTIVE ) {
@@ -31,10 +58,15 @@ if ( input_bomb && !bombing && !recovery) {
 			invuln = 60;
 			hyper_time = 420;
 			hyper_tier = HYPER_TIER_3;
+			emergency = -5;
 		} else if (bombs_current > 0 ) {
 			bombs_current = 0;						//costs all bombs
 			bombing = 300;
 			invuln = 360;
+			emergency = -5;
+			if (hyper_time > 0) {
+				hyper_time = 0;
+			}
 //TODO: create death bomb object
 			//instance_create
 		}
@@ -52,6 +84,9 @@ if ( input_bomb && !bombing && !recovery) {
 			bombs_current -= 1;						//costs 1 bomb
 			bombing = 180;
 			invuln = 180;
+			if (hyper_time > 0) {
+				hyper_time = 0;
+			}
 //TODO: create bomb object
 			//instance_create
 		}
@@ -59,7 +94,7 @@ if ( input_bomb && !bombing && !recovery) {
 }
 	
 //movement logic
-if ( !emergency && !recovery ) {
+if ( !emergency && !respawn ) {
 	//convert input bools to directions
 	if ( input_up ) {
 		v_move--;
@@ -99,7 +134,7 @@ if ( !emergency && !recovery ) {
 }
 
 //shot and facing logic
-if ( !emergency && !recovery ) {
+if ( !emergency && !respawn ) {
 	//change directions if only one is held
 	if ( input_shot_left && !input_shot_right ) {
 		face_dir = LEFT;		
@@ -146,4 +181,10 @@ if ( !emergency && !recovery ) {
 			}
 		}
 	}
+}
+	
+//death logic
+if ( lives_current == 0 ) {
+//TODO: add score and continue logic
+	room_goto(rm_title);
 }

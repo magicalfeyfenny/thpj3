@@ -6,7 +6,8 @@ face_dir = RIGHT;
 
 hitbox_rotator = 0;
 bombing = 0;
-invuln = 0;
+invuln = false;
+respawn = 0;
 recovery = 0;
 emergency = 0;
 hyper_time = 0;
@@ -14,6 +15,8 @@ hyper_tier = 0;
 h_move = 0;
 v_move = 0;
 shoot_delay = 0;
+x = SPAWN_X;
+y = SPAWN_Y;
 
 top_option = instance_create_layer(x,y,"Instances", obj_options);
 with (top_option) {
