@@ -53,6 +53,8 @@
 #macro SHOT_OPTION_DAMAGE 1
 #macro SHOT_OPTION_SPEED 20
 
+#macro PATTERN_STREAM 0
+
 function scr_initialize() {
 	randomize();
 }

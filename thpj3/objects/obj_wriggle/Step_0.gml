@@ -33,6 +33,8 @@ if ( hyper_current > HYPER_MAX ) {
 }
 if ( emergency == 0 ) {
 	lives_current -= 1;
+	bombs_current = BOMBS_INIT;
+	hyper_current += HYPER_COST;
 	respawn = RESPAWN_TIMER;
 	x = SPAWN_X;
 	y = SPAWN_Y;
