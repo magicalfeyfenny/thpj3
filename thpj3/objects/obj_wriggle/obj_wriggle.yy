@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "thpj3",
-    "path": "thpj3.yyp",
+    "name": "player",
+    "path": "folders/player.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_wriggle",

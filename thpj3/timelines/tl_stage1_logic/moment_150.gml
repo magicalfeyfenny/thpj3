@@ -1,0 +1,1 @@
+scr_dialogue_start( "dialogue_test.txt" );

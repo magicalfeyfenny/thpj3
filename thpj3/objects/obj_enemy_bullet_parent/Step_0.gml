@@ -1,5 +1,5 @@
-if ( obj_wriggle.bombing || obj_wriggle.respawn ) {
-	if ( obj_wriggle.hyper_time ) {
+if ( obj_wriggle.bombing || obj_wriggle.respawn || obj_dialogue.dialogue_mode ) {
+	if ( obj_wriggle.hyper_time && !obj_dialogue.dialogue_mode ) {
 //TODO: create a point item if during a hyper
 	}
 	instance_destroy();

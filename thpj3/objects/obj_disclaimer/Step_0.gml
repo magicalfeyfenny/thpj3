@@ -1,9 +1,9 @@
 counter++;
 
-if (counter > 360) {
-	alpha_cycle = (420 - counter) / 60;
+if (counter > 180) {
+	alpha_cycle = (210 - counter) / 30;
 } else {
-	alpha_cycle = counter / 60;
+	alpha_cycle = counter / 30;
 }
 
 if ( counter >= countermax ) {

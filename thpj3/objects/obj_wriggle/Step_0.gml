@@ -3,11 +3,13 @@ bombing--;
 recovery--;
 respawn--;
 emergency--;
-hyper_time--;
 shoot_delay--;
 h_move = 0;
 v_move = 0;
-hyper_current += .02;
+if (!obj_dialogue.dialogue_mode) {
+	hyper_current += .02;
+	hyper_time--;
+}
 
 input_up = keyboard_check( vk_up );
 input_down = keyboard_check( vk_down );
@@ -51,7 +53,7 @@ if ( bombing || recovery || emergency || respawn || obj_dialogue.dialogue_mode )
 }
 
 //bomb logic
-if ( input_bomb && !bombing && !recovery && !respawn ) {
+if ( input_bomb && !bombing && !recovery && !respawn && !obj_dialogue.dialogue_mode ) {
 	//death bomb	
 	if ( emergency ) {
 		if ( hyper_current >= HYPER_COST && hyper_tier == HYPER_INACTIVE ) {
@@ -136,7 +138,7 @@ if ( !emergency && !respawn ) {
 }
 
 //shot and facing logic
-if ( !emergency && !respawn ) {
+if ( !emergency && !respawn && !obj_dialogue.dialogue_mode ) {
 	//change directions if only one is held
 	if ( input_shot_left && !input_shot_right ) {
 		face_dir = LEFT;		
@@ -147,7 +149,7 @@ if ( !emergency && !respawn ) {
 	if ( input_shot_left || input_shot_right ) {
 		if ( shoot_delay <= 0 ) {
 			shoot_delay = SHOT_DELAY;
-			var shooty = instance_create_layer( x + (face_dir * 10), y + (TOP * 10), "Instances", obj_player_shot);
+			var shooty = instance_create_layer( x + (face_dir * 10), y + (TOP * 10), "player", obj_player_shot);
 			with (shooty) {
 				face_dir = other.face_dir;
 				damage = SHOT_PLAYER_DAMAGE;
@@ -155,7 +157,7 @@ if ( !emergency && !respawn ) {
 				direction = 270 + (90 * face_dir);
 				image_angle = direction;
 			}
-			var shooty = instance_create_layer( x + (face_dir * 10), y + (BOTTOM * 10), "Instances", obj_player_shot);
+			var shooty = instance_create_layer( x + (face_dir * 10), y + (BOTTOM * 10), "player", obj_player_shot);
 			with (shooty) {
 				face_dir = other.face_dir;
 				damage = SHOT_PLAYER_DAMAGE;
@@ -164,7 +166,7 @@ if ( !emergency && !respawn ) {
 				image_angle = direction;
 			}
 			for (var i = 0; i < 40; i += 10) {
-				var shotia = instance_create_layer( top_option.x, top_option.y, "Instances", obj_option_shot);
+				var shotia = instance_create_layer( top_option.x, top_option.y, "player", obj_option_shot);
 				with (shotia) {
 					face_dir = other.face_dir;
 					damage = SHOT_OPTION_DAMAGE;
@@ -172,7 +174,7 @@ if ( !emergency && !respawn ) {
 					direction = point_direction( other.x, other.y, other.top_option.x, other.top_option.y ) - (i * face_dir);
 					image_angle = direction;
 				}
-				var shotia = instance_create_layer( bottom_option.x, bottom_option.y, "Instances", obj_option_shot);
+				var shotia = instance_create_layer( bottom_option.x, bottom_option.y, "player", obj_option_shot);
 				with (shotia) {
 					face_dir = other.face_dir;
 					damage = SHOT_OPTION_DAMAGE;
@@ -189,4 +191,10 @@ if ( !emergency && !respawn ) {
 if ( lives_current == 0 ) {
 //TODO: add score and continue logic
 	room_goto(rm_title);
+}
+
+
+
+if (keyboard_check( vk_escape ) ) {
+	game_end();
 }

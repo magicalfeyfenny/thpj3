@@ -18,12 +18,14 @@ shoot_delay = 0;
 x = SPAWN_X;
 y = SPAWN_Y;
 
-top_option = instance_create_layer(x,y,"Instances", obj_options);
+top_option = instance_create_layer(x,y,"player", obj_options);
 with (top_option) {
 	side_modifier = TOP;
 }
 
-bottom_option = instance_create_layer(x,y,"Instances", obj_options);
+bottom_option = instance_create_layer(x,y,"player", obj_options);
 with (bottom_option) {
 	side_modifier = BOTTOM;
 }
+
+testtext = 1000;

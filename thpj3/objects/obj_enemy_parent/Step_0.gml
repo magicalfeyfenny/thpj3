@@ -1,5 +1,8 @@
-if ( hp <= 0 ) {
+if ( hp <= 0 || obj_dialogue.dialogue_mode ) {
 	instance_destroy();
+	if ( !obj_dialogue.dialogue_mode ) {
+//TODO: point system for kills
+	}
 }
 if ( obj_wriggle.emergency ) {
 	temp_speed = speed;

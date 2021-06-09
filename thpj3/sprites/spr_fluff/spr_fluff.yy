@@ -81,8 +81,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "thpj3",
-    "path": "thpj3.yyp",
+    "name": "enemies",
+    "path": "folders/enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_fluff",

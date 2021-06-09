@@ -1,4 +1,4 @@
 counter = 0;
-countermax = 420;
+countermax = 240;
 
 alpha_cycle = 0;
