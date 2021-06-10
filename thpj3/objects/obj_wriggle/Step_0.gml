@@ -72,7 +72,7 @@ if ( input_bomb && !bombing && !recovery && !respawn && !obj_dialogue.dialogue_m
 				hyper_time = 0;
 			}
 //TODO: create death bomb object
-			//instance_create
+			instance_create_layer( 0, 0, "player", obj_bomber_topologic );
 		}
 	} else {
 		if ( hyper_current >= HYPER_COST && hyper_tier == HYPER_INACTIVE ) {
@@ -92,7 +92,7 @@ if ( input_bomb && !bombing && !recovery && !respawn && !obj_dialogue.dialogue_m
 				hyper_time = 0;
 			}
 //TODO: create bomb object
-			//instance_create
+			instance_create_layer( x, y, "player", obj_bomber );
 		}
 	}
 }
@@ -152,35 +152,51 @@ if ( !emergency && !respawn && !obj_dialogue.dialogue_mode ) {
 			var shooty = instance_create_layer( x + (face_dir * 10), y + (TOP * 10), "player", obj_player_shot);
 			with (shooty) {
 				face_dir = other.face_dir;
-				damage = SHOT_PLAYER_DAMAGE;
+				damage = SHOT_PLAYER_DAMAGE * (1 + .5 * other.hyper_tier);
 				speed = SHOT_PLAYER_SPEED;
 				direction = 270 + (90 * face_dir);
 				image_angle = direction;
+				if (other.hyper_time) {
+					image_xscale = 1 + (.3 * other.hyper_tier);
+					image_yscale = 1 + (.3 * other.hyper_tier);
+				}
 			}
 			var shooty = instance_create_layer( x + (face_dir * 10), y + (BOTTOM * 10), "player", obj_player_shot);
 			with (shooty) {
 				face_dir = other.face_dir;
-				damage = SHOT_PLAYER_DAMAGE;
+				damage = SHOT_PLAYER_DAMAGE * (1 + .5 * other.hyper_tier);
 				speed = SHOT_PLAYER_SPEED;
 				direction = 270 + (90 * face_dir);
 				image_angle = direction;
+				if (other.hyper_time) {
+					image_xscale = 1 + (.3 * other.hyper_tier);
+					image_yscale = 1 + (.3 * other.hyper_tier);
+				}
 			}
 			for (var i = 0; i < 40; i += 10) {
 				var shotia = instance_create_layer( top_option.x, top_option.y, "player", obj_option_shot);
 				with (shotia) {
 					face_dir = other.face_dir;
-					damage = SHOT_OPTION_DAMAGE;
+					damage = SHOT_OPTION_DAMAGE * (1 + .5 * other.hyper_tier);
 					speed = SHOT_OPTION_SPEED;
 					direction = point_direction( other.x, other.y, other.top_option.x, other.top_option.y ) - (i * face_dir);
 					image_angle = direction;
+					if (other.hyper_time) {
+						image_xscale = 1 + (.3 * other.hyper_tier);
+						image_yscale = 1 + (.3 * other.hyper_tier);
+					}
 				}
 				var shotia = instance_create_layer( bottom_option.x, bottom_option.y, "player", obj_option_shot);
 				with (shotia) {
 					face_dir = other.face_dir;
-					damage = SHOT_OPTION_DAMAGE;
+					damage = SHOT_OPTION_DAMAGE * (1 + .5 * other.hyper_tier);
 					speed = SHOT_OPTION_SPEED;
 					direction = point_direction( other.x, other.y, other.bottom_option.x, other.bottom_option.y ) + (i * face_dir);
 					image_angle = direction;
+					if (other.hyper_time) {
+						image_xscale = 1 + (.3 * other.hyper_tier);
+						image_yscale = 1 + (.3 * other.hyper_tier);
+					}
 				}
 			}
 		}

@@ -1,13 +1,16 @@
 {
   "spriteId": {
-    "name": "spr_player_shot",
-    "path": "sprites/spr_player_shot/spr_player_shot.yy",
+    "name": "spr_bomber_topologic",
+    "path": "sprites/spr_bomber_topologic/spr_bomber_topologic.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_bomber",
+    "path": "objects/obj_bomber/obj_bomber.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -20,10 +23,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -31,7 +31,7 @@
     "path": "folders/player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_player_shot",
+  "name": "obj_bomber_topologic",
   "tags": [],
   "resourceType": "GMObject",
 }

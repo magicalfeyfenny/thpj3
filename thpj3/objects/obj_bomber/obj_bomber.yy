@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_player_shot",
-    "path": "sprites/spr_player_shot/spr_player_shot.yy",
+    "name": "spr_bomber",
+    "path": "sprites/spr_bomber/spr_bomber.yy",
   },
   "solid": false,
   "visible": true,
@@ -22,7 +22,6 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -31,7 +30,7 @@
     "path": "folders/player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_player_shot",
+  "name": "obj_bomber",
   "tags": [],
   "resourceType": "GMObject",
 }
