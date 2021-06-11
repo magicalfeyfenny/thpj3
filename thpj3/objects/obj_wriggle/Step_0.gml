@@ -37,6 +37,8 @@ if ( emergency == 0 ) {
 	lives_current -= 1;
 	bombs_current = BOMBS_INIT;
 	hyper_current += HYPER_COST;
+	hyper_time = 0;
+	bombing = 0;
 	respawn = RESPAWN_TIMER;
 	x = SPAWN_X;
 	y = SPAWN_Y;

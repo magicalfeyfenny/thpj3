@@ -4,11 +4,10 @@ if ( hp <= 0 || obj_dialogue.dialogue_mode ) {
 //TODO: point system for kills
 	}
 }
-if ( obj_wriggle.emergency ) {
+if ( obj_wriggle.emergency && !temp_speed ) {
 	temp_speed = speed;
 	speed = 0;
-}
-if ( !obj_wriggle.emergency && temp_speed ) {
+} else if ( !obj_wriggle.emergency && temp_speed ) {
 	speed = temp_speed;
 	temp_speed = 0;
 }

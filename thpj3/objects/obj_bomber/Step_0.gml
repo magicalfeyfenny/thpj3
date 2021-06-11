@@ -4,6 +4,12 @@ if ( !obj_wriggle.bombing ) {
 
 if ( instance_exists( obj_enemy_parent ) ) {
 	with( obj_enemy_parent ) {
-		hp -= 2;
+		if ( variable_instance_exists( self.id, "invuln" ) ) {
+			if ( !invuln ) {
+				hp -= 2;
+			}
+		} else {
+			hp -= 2;
+		}
 	}
 }

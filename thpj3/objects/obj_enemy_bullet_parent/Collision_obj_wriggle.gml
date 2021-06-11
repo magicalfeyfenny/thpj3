@@ -1,6 +1,6 @@
 if (!other.invuln) {
 	with (other) {
-		emergency = 15;
+		emergency = DEATHBOMB_WINDOW;
 	}
 }
 instance_destroy();

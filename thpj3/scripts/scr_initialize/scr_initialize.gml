@@ -31,7 +31,7 @@
 #macro HYPER_INIT 0
 #macro HYPER_COST 100
 #macro HYPER_MAX 300
-#macro DEATHBOMB_WINDOW 15
+#macro DEATHBOMB_WINDOW 40
 #macro RESPAWN_TIMER 60
 #macro RESPAWN_INVULN 120
 
@@ -54,6 +54,14 @@
 #macro SHOT_OPTION_SPEED 20
 
 #macro PATTERN_STREAM 0
+#macro PATTERN_AIMED_WAVE 1
+
+#macro MODE_APPROACH 0
+#macro MODE_CHAT 1
+#macro MODE_CHARGE 2
+#macro MODE_ACTIVE 3
+#macro BOSS_CHARGE_TIME 120
+#macro BOSS_APPROACH_TIME 30
 
 function scr_initialize() {
 	randomize();
