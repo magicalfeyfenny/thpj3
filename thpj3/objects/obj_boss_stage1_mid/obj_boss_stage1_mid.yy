@@ -1,10 +1,16 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_byakuren",
+    "path": "sprites/spr_byakuren/spr_byakuren.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_boss_parent",
+    "path": "objects/obj_boss_parent/obj_boss_parent.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -18,18 +24,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_wriggle","path":"objects/obj_wriggle/obj_wriggle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "parent classes",
-    "path": "folders/enemies/parent classes.yy",
+    "name": "enemies",
+    "path": "folders/enemies.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_enemy_bullet_parent",
+  "name": "obj_boss_stage1_mid",
   "tags": [],
   "resourceType": "GMObject",
 }
