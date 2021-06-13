@@ -17,7 +17,7 @@ function scr_dialogue_start( _filename ) {
 	actor_right			{string}	name_test
 	texttarget			{string}	text_test
 	
-	repeat until EOF
+	repeat until EOF. # acts as a newline delimiter
 */	
 
 	//clear all queues
@@ -34,9 +34,11 @@ function scr_dialogue_start( _filename ) {
 		ds_queue_enqueue( obj_dialogue.active_test, file_text_read_real(file) );
 		file_text_readln(file);
 		ds_queue_enqueue( obj_dialogue.emote_test, file_text_read_real(file) );
+		file_text_readln(file);
 		ds_queue_enqueue( obj_dialogue.name_test, file_text_read_string(file) );
 		file_text_readln(file);
 		ds_queue_enqueue( obj_dialogue.emote_test, file_text_read_real(file) );
+		file_text_readln(file);
 		ds_queue_enqueue( obj_dialogue.name_test, file_text_read_string(file) );
 		file_text_readln(file);
 		ds_queue_enqueue( obj_dialogue.text_test, file_text_read_string(file) );
@@ -50,6 +52,7 @@ function scr_dialogue_start( _filename ) {
 	obj_dialogue.dialogue_mode = true;
 	obj_dialogue.textspew = "";
 	obj_dialogue.texttarget = "";
+	obj_dialogue.textload = "";
 	obj_dialogue.actor_left = "";
 	obj_dialogue.actor_left_emote = EMOTE_NEUTRAL;
 	obj_dialogue.actor_right = "";

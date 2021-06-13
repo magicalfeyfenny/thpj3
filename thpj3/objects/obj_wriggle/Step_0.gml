@@ -141,12 +141,12 @@ if ( !emergency && !respawn ) {
 
 //shot and facing logic
 if ( !emergency && !respawn && !obj_dialogue.dialogue_mode ) {
-	//change directions if only one is held
+	//allows changing direction if only one is held
 	if ( input_shot_left && !input_shot_right ) {
-		face_dir = LEFT;		
+		face_dir = RIGHT;		
 	}
 	if ( !input_shot_left && input_shot_right ) {
-		face_dir = RIGHT;
+		face_dir = RIGHT; //i really don't feel like designing around the direction-switching gimmick
 	}
 	if ( input_shot_left || input_shot_right ) {
 		if ( shoot_delay <= 0 ) {

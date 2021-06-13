@@ -1,48 +1,72 @@
 1
-0 Wriggle
-1 Byakuren
+0
+Wriggle
+1
+Byakuren
 Ohohohoho~ Speak of the bug!
 0
-3 Wriggle
-1 Byakuren
+3
+Wriggle
+1
+Byakuren
 Wait that's my catchphrase when did you learn it?
 1
-3 Wriggle
-1 Byakuren
-I lived in Makai. There's a lot of devils there.\n'Speak of the devil' simply didn't catch on.
+3
+Wriggle
+1
+Byakuren
+I lived in Makai. There's a lot of devils there.#'Speak of the devil' simply didn't catch on.
 0
-4 Wriggle
-1 Byakuren
+4
+Wriggle
+1
+Byakuren
 You're saying I'm worse than a devil?
 1
-4 Wriggle
-3 Byakuren
-Neither devils nor bugs are bad things in my book. Devils are pretty cool.\nYou're also pretty cool, and also just pretty~~
+4
+Wriggle
+3
+Byakuren
+Neither devils nor bugs are bad things in my book. Devils are pretty cool.#You're also pretty cool, and also just pretty~~
 0
-3 Wriggle
-3 Byakuren
+3
+Wriggle
+3
+Byakuren
 W-wha? >/////////< Aren't you scared of what a bug can do?
 1
-3 Wriggle
-1 Byakuren
-With that cute face? I'd be more afraid of losing sight of Nirvana\nfor the sight in front of me!
-0
-3 Wriggle
-1 Byakuren
-T-thanks I guess? >////<\nI'm actually looking for my lady right now though... A UFO took her.
-0
-2 Wriggle
-1 Byakuren
-Do you know where they might have gone? She's about my height\nand has a cute hat and pink hair.
+3
+Wriggle
 1
-2 Wriggle
-2 Byakuren
-I might know a thing or two. Come, let us dance, get to know each other~
+Byakuren
+With that cute face? I'd be more afraid of losing sight of Nirvana#for the sight in front of me!
 0
-3 Wriggle
-2 Byakuren
+3
+Wriggle
+1
+Byakuren
+T-thanks I guess? >////<#I'm actually looking for my lady right now though... A UFO took her.
+0
+2
+Wriggle
+1
+Byakuren
+Do you know where they might have gone? She's about my height#and has a cute hat and pink hair.
+1
+2
+Wriggle
+2
+Byakuren
+I might know a thing or two. Come, let's dance, get to know each other~
+0
+3
+Wriggle
+2
+Byakuren
 You mean... a date?
 1
-3 Wriggle
-1 Byakuren
+3
+Wriggle
+1 
+Byakuren
 Yes, in the traditional Gensokyo way! A dance of bullets!

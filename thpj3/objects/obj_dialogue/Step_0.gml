@@ -3,12 +3,60 @@ if (dialogue_mode) {
 		text_advance_ready = TEXT_TYPING;
 		actor_left = ds_queue_dequeue(name_test);
 		actor_left_emote = ds_queue_dequeue(emote_test);
+		switch ( actor_left_emote ) {
+			case 0:
+				actor_left_sprite = asset_get_index( "spr_" + string_lower(actor_left) + "_0_neutral" );
+				break;
+			case 1:
+				actor_left_sprite = asset_get_index( "spr_" + string_lower(actor_left) + "_1_happy" );
+				break;
+			case 2:
+				actor_left_sprite = asset_get_index( "spr_" + string_lower(actor_left) + "_2_sad" );
+				break;
+			case 3:
+				actor_left_sprite = asset_get_index( "spr_" + string_lower(actor_left) + "_3_confused" );
+				break;
+			case 4:
+				actor_left_sprite = asset_get_index( "spr_" + string_lower(actor_left) + "_4_angry" );
+				break;
+			case 5:
+				actor_left_sprite = asset_get_index( "spr_" + string_lower(actor_left) + "_5_sad" );
+				break;
+			default:
+				actor_left_sprite = -1;
+				break;
+		}
+		
 		actor_right = "";
 		if (!ds_queue_empty(name_test) && !ds_queue_empty(emote_test)) {
 			actor_right = ds_queue_dequeue(name_test);
 			actor_right_emote = ds_queue_dequeue(emote_test);
+			switch ( actor_right_emote ) {
+				case 0:
+					actor_right_sprite = asset_get_index( "spr_" + string_lower(actor_right) + "_0_neutral" );
+					break;
+				case 1:
+					actor_right_sprite = asset_get_index( "spr_" + string_lower(actor_right) + "_1_happy" );
+					break;
+				case 2:
+					actor_right_sprite = asset_get_index( "spr_" + string_lower(actor_right) + "_2_sad" );
+					break;
+				case 3:
+					actor_right_sprite = asset_get_index( "spr_" + string_lower(actor_right) + "_3_confused" );
+					break;
+				case 4:
+					actor_right_sprite = asset_get_index( "spr_" + string_lower(actor_right) + "_4_angry" );
+					break;
+				case 5:
+					actor_right_sprite = asset_get_index( "spr_" + string_lower(actor_right) + "_5_sad" );
+					break;
+				default:
+					actor_right_sprite = -1;
+					break;
+			}
 		}
-		texttarget = ds_queue_dequeue(text_test);
+		textload = ds_queue_dequeue(text_test);
+		texttarget = string_replace_all(textload, "#", "\n" );
 		textspew = "";
 		spewlength = 1;
 		last_active = ds_queue_dequeue(active_test);
@@ -34,11 +82,5 @@ if (dialogue_mode) {
 			}
 		}
 	}
-	
-	
-	
-	
-	
-	
 	
 }

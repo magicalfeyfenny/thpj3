@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "thpj3",
-    "path": "thpj3.yyp",
+    "name": "dialogue",
+    "path": "folders/dialogue.yy",
   },
   "resourceVersion": "1.0",
   "name": "scr_dialogue_start",

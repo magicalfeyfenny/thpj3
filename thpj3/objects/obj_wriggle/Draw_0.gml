@@ -5,6 +5,7 @@ if (!respawn) {
 draw_sprite_ext( spr_wriggle_hitbox, 0, x, y, 2, 2, hitbox_rotator, c_white, .75);
 draw_sprite_ext( spr_wriggle_hitbox, 0, x, y, 1, 1, -hitbox_rotator, c_white, 1);
 
+/* debug text
 draw_set_font( fn_GUI );
 draw_text( 20, 690, input_left ); 
 draw_text( 50, 690, input_right );
@@ -23,3 +24,4 @@ draw_text( 1000, 30, "invulnerable state: " + string(invuln) );
 draw_text( 20, 10, "lives: " + string(lives_current) + " / " + string(LIVES_MAX) );
 draw_text( 20, 30, "bombs: " + string(bombs_current) + " / " + string(BOMBS_MAX) );
 draw_text( 20, 50, "hyper: " + string(hyper_current) + " / " + string(HYPER_MAX) + " / req: " + string(HYPER_COST) );
+*/

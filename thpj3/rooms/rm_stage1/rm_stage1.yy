@@ -15,6 +15,7 @@
   "layers": [
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_dialogue","path":"objects/obj_dialogue/obj_dialogue.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":96.0,"y":448.0,"resourceVersion":"1.0","name":"inst_1FC80063","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_UI_controller","path":"objects/obj_UI_controller/obj_UI_controller.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"inst_2D928E65","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"GUI","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"enemy","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
@@ -37,9 +38,10 @@
   "inheritCode": false,
   "instanceCreationOrder": [
     {"name":"inst_79020E92","path":"rooms/rm_stage1/rm_stage1.yy",},
-    {"name":"inst_1FC80063","path":"rooms/rm_stage1/rm_stage1.yy",},
-    {"name":"inst_41ECD54B","path":"rooms/rm_stage1/rm_stage1.yy",},
     {"name":"inst_38CD0D4A","path":"rooms/rm_stage1/rm_stage1.yy",},
+    {"name":"inst_41ECD54B","path":"rooms/rm_stage1/rm_stage1.yy",},
+    {"name":"inst_2D928E65","path":"rooms/rm_stage1/rm_stage1.yy",},
+    {"name":"inst_1FC80063","path":"rooms/rm_stage1/rm_stage1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
