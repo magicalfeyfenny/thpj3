@@ -10,7 +10,6 @@ if (dialogue_mode) {
 // Draw dialogue box
 	draw_self();
 	
-//TODO: Draw current active character's name
 	draw_set_font(fn_dialogue_names);
 	draw_set_alpha(1);
 	if ( last_active == LEFT_ACTOR ) {
@@ -25,14 +24,11 @@ if (dialogue_mode) {
 		draw_set_alpha(0);
 	}
 	draw_text( 128, 640, actor_left );
-	
 	draw_set_alpha(1);
-
-//TODO: Draw current active character's text, adding one character at a time
+	
 	draw_set_font(fn_dialogue_text);
 	draw_text( 145, 490, textspew );
 	
-//TODO: If the current text has reached completion, draw an arrow in the corner
 	if (text_advance_ready == TEXT_READY) {
 		loopdoop++;
 		draw_sprite( spr_text_arrow, round((loopdoop % 160) / 20), 1088, 608 ); 

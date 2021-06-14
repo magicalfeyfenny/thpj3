@@ -64,6 +64,7 @@ if (dialogue_mode) {
 	
 	if (text_advance_ready == TEXT_TYPING ) {
 		textspew += string_char_at(texttarget, spewlength);
+		audio_play_sound( snd_typewriter, 0, false );
 		spewlength++;
 		if (keyboard_check_pressed( ord("Z") ) ) {
 			textspew = texttarget;

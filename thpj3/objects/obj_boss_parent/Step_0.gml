@@ -1,11 +1,15 @@
 charge_timer--;
 
 if (hp <= 0) {
+	with (obj_enemy_bullet_parent) {
+		instance_destroy();
+	}
 	if ( current_phase < phases ) {
 		current_phase++;
 		hp = phase_hp[current_phase];
 		charge_timer = BOSS_CHARGE_TIME;
 		phase_mode = MODE_CHARGE;
+		audio_play_sound( snd_boss_spellbreak, 1, false );
 	} else {
 		instance_destroy();
 	}

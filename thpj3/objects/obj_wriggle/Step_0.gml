@@ -35,6 +35,10 @@ if ( hyper_current > HYPER_MAX ) {
 }
 if ( emergency == 0 ) {
 	lives_current -= 1;
+	effect_create_below( ef_ring, x, y, 2, c_aqua );
+	for ( var i = 0; i < 20; i++ ) {
+		effect_create_below( ef_firework, x, y, 2, make_color_rgb( irandom(255), irandom(255), irandom(255) ) );
+	}
 	bombs_current = BOMBS_INIT;
 	hyper_current += HYPER_COST;
 	hyper_time = 0;
@@ -65,6 +69,8 @@ if ( input_bomb && !bombing && !recovery && !respawn && !obj_dialogue.dialogue_m
 			hyper_time = 420;
 			hyper_tier = HYPER_TIER_3;
 			emergency = -5;
+//TODO: create hyper activation effect
+			audio_play_sound(snd_player_hyperactive, 3, false);
 		} else if (bombs_current > 0 ) {
 			bombs_current = 0;						//costs all bombs
 			bombing = 300;
@@ -73,8 +79,8 @@ if ( input_bomb && !bombing && !recovery && !respawn && !obj_dialogue.dialogue_m
 			if (hyper_time > 0) {
 				hyper_time = 0;
 			}
-//TODO: create death bomb object
 			instance_create_layer( 0, 0, "player", obj_bomber_topologic );
+			audio_play_sound(snd_player_deathbomb, 3, false);
 		}
 	} else {
 		if ( hyper_current >= HYPER_COST && hyper_tier == HYPER_INACTIVE ) {
@@ -86,6 +92,8 @@ if ( input_bomb && !bombing && !recovery && !respawn && !obj_dialogue.dialogue_m
 			}
 			bombing = 60;
 			invuln = 60;
+//TODO: create hyper activation effect
+			audio_play_sound(snd_player_hyperactive, 3, false);
 		} else if ( bombs_current > 0 ) {
 			bombs_current -= 1;						//costs 1 bomb
 			bombing = 180;
@@ -93,8 +101,8 @@ if ( input_bomb && !bombing && !recovery && !respawn && !obj_dialogue.dialogue_m
 			if (hyper_time > 0) {
 				hyper_time = 0;
 			}
-//TODO: create bomb object
 			instance_create_layer( x, y, "player", obj_bomber );
+			audio_play_sound(snd_player_bomber, 3, false);
 		}
 	}
 }
@@ -151,6 +159,11 @@ if ( !emergency && !respawn && !obj_dialogue.dialogue_mode ) {
 	if ( input_shot_left || input_shot_right ) {
 		if ( shoot_delay <= 0 ) {
 			shoot_delay = SHOT_DELAY;
+			if (hyper_time) {
+				audio_play_sound(snd_player_hypershot, 0, false);
+			} else {
+				audio_play_sound(snd_player_shot, 0, false);
+			}
 			var shooty = instance_create_layer( x + (face_dir * 10), y + (TOP * 10), "player", obj_player_shot);
 			with (shooty) {
 				face_dir = other.face_dir;
@@ -208,6 +221,7 @@ if ( !emergency && !respawn && !obj_dialogue.dialogue_mode ) {
 //death logic
 if ( lives_current == 0 ) {
 //TODO: add score and continue logic
+	audio_stop_all();
 	room_goto(rm_title);
 }
 

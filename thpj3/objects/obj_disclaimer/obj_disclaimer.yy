@@ -26,7 +26,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "disclaimer",
-    "path": "folders/disclaimer.yy",
+    "path": "folders/title/disclaimer.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_disclaimer",
