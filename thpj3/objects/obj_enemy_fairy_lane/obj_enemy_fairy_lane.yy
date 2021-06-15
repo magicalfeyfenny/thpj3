@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_fairy",
-    "path": "sprites/spr_fairy/spr_fairy.yy",
+    "name": "spr_fairy_lane",
+    "path": "sprites/spr_fairy_lane/spr_fairy_lane.yy",
   },
   "solid": false,
   "visible": true,

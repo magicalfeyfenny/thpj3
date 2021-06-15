@@ -156,8 +156,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "enemies",
-    "path": "folders/enemies.yy",
+    "name": "bullets",
+    "path": "folders/enemies/bullets.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_bullet_diamond",

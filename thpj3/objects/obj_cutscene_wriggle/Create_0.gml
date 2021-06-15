@@ -1,0 +1,1 @@
+scr_dialogue_start( "cutscene_dialogue.txt" );

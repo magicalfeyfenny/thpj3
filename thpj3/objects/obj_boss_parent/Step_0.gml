@@ -32,6 +32,7 @@ if ( phase_mode == MODE_CHARGE ) {
 	if ( !charge_timer ) {
 		phase_mode = MODE_ACTIVE;
 	}
+	y = _y;
 }
 
 //dialogue
@@ -50,6 +51,7 @@ if ( phase_mode == MODE_APPROACH ) {
 	vspeed = 15 - min( 15, (BOSS_APPROACH_TIME - charge_timer) / 2 );
 	image_angle += 24;
 	if ( !charge_timer ) {
+		_y = y;
 		if ( file_exists( stagename + "_" + bossname + "_dialogue.txt" ) ) {	// "stage#_bossname_dialogue.txt"
 			scr_dialogue_start( stagename + "_" + bossname + "_dialogue.txt" );
 			phase_mode = MODE_CHAT;

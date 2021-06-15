@@ -18,6 +18,7 @@ if ( point_distance( x, y, obj_wriggle.x, obj_wriggle.y ) < 64 ) {
 	obj_wriggle.hyper_current += .1;
 	audio_play_sound(snd_graze, 0, false);
 	effect_create_below(ef_spark, obj_wriggle.x, obj_wriggle.y, 0, c_white);
+	obj_wriggle.score_current += SCORE_GRAZE_VALUE * ( obj_wriggle.score_multiply ) * (obj_wriggle.hyper_tier + 1);
 }
 
 if ( x < BOUNDARY_LEFT - 128 || x > BOUNDARY_RIGHT + 128 || y < BOUNDARY_TOP - 128 || y > BOUNDARY_BOTTOM + 128 ) {

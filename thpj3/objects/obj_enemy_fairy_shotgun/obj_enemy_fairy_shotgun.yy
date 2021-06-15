@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_fairy",
-    "path": "sprites/spr_fairy/spr_fairy.yy",
+    "name": "spr_fairy_shotgun",
+    "path": "sprites/spr_fairy_shotgun/spr_fairy_shotgun.yy",
   },
   "solid": false,
   "visible": true,

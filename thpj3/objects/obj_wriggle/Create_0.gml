@@ -1,6 +1,8 @@
 lives_current = LIVES_INIT;
 bombs_current = BOMBS_INIT;
 hyper_current = HYPER_INIT;
+score_current = SCORE_ZERO;
+score_high = scr_scores( SCORE_READ );
 
 face_dir = RIGHT;
 
@@ -12,6 +14,7 @@ recovery = 0;
 emergency = 0;
 hyper_time = 0;
 hyper_tier = 0;
+score_multiply = 1;
 h_move = 0;
 v_move = 0;
 shoot_delay = 0;

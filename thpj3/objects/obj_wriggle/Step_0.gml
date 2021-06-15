@@ -1,3 +1,7 @@
+if (score_current > score_high ) {
+	score_high = score_current;
+}
+
 hitbox_rotator++;
 bombing--;
 recovery--;
@@ -26,9 +30,11 @@ if ( hyper_time <= 0 ) {
 }
 if ( lives_current > LIVES_MAX ) {
 	lives_current = LIVES_MAX;
+	score_current += 10000;
 }
 if ( bombs_current > BOMBS_MAX ) {
 	bombs_current = BOMBS_MAX;
+	score_current += 10000;
 }
 if ( hyper_current > HYPER_MAX ) {
 	hyper_current = HYPER_MAX;
@@ -43,6 +49,7 @@ if ( emergency == 0 ) {
 	hyper_current += HYPER_COST;
 	hyper_time = 0;
 	bombing = 0;
+	score_multiply = score_multiply / 2;
 	respawn = RESPAWN_TIMER;
 	x = SPAWN_X;
 	y = SPAWN_Y;
@@ -76,6 +83,7 @@ if ( input_bomb && !bombing && !recovery && !respawn && !obj_dialogue.dialogue_m
 			bombing = 300;
 			invuln = 360;
 			emergency = -5;
+			score_multiply = score_multiply * (.8);
 			if (hyper_time > 0) {
 				hyper_time = 0;
 			}
@@ -98,6 +106,7 @@ if ( input_bomb && !bombing && !recovery && !respawn && !obj_dialogue.dialogue_m
 			bombs_current -= 1;						//costs 1 bomb
 			bombing = 180;
 			invuln = 180;
+			score_multiply = score_multiply * (.8);
 			if (hyper_time > 0) {
 				hyper_time = 0;
 			}
@@ -106,6 +115,12 @@ if ( input_bomb && !bombing && !recovery && !respawn && !obj_dialogue.dialogue_m
 		}
 	}
 }
+
+score_multiply--;
+if (score_multiply == 0) {
+	score_multiply = 1;
+}
+score_multiply = ceil( score_multiply );
 	
 //movement logic
 if ( !emergency && !respawn ) {
@@ -221,12 +236,13 @@ if ( !emergency && !respawn && !obj_dialogue.dialogue_mode ) {
 //death logic
 if ( lives_current == 0 ) {
 //TODO: add score and continue logic
+	scr_scores( SCORE_WRITE );
 	audio_stop_all();
 	room_goto(rm_title);
 }
 
 
-
+/* debug */
 if (keyboard_check( vk_escape ) ) {
 	game_end();
 }

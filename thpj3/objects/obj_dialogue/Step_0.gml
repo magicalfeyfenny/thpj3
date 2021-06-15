@@ -20,7 +20,7 @@ if (dialogue_mode) {
 				actor_left_sprite = asset_get_index( "spr_" + string_lower(actor_left) + "_4_angry" );
 				break;
 			case 5:
-				actor_left_sprite = asset_get_index( "spr_" + string_lower(actor_left) + "_5_sad" );
+				actor_left_sprite = asset_get_index( "spr_" + string_lower(actor_left) + "_5_ouch" );
 				break;
 			default:
 				actor_left_sprite = -1;
@@ -48,7 +48,7 @@ if (dialogue_mode) {
 					actor_right_sprite = asset_get_index( "spr_" + string_lower(actor_right) + "_4_angry" );
 					break;
 				case 5:
-					actor_right_sprite = asset_get_index( "spr_" + string_lower(actor_right) + "_5_sad" );
+					actor_right_sprite = asset_get_index( "spr_" + string_lower(actor_right) + "_5_ouch" );
 					break;
 				default:
 					actor_right_sprite = -1;

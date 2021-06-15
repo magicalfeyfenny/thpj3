@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_fairy",
-    "path": "sprites/spr_fairy/spr_fairy.yy",
+    "name": "spr_fairy_wave",
+    "path": "sprites/spr_fairy_wave/spr_fairy_wave.yy",
   },
   "solid": false,
   "visible": true,
