@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_graze",
-  "duration": 0.0,
+  "soundFile": "snd_graze.wav",
+  "duration": 0.411349,
   "parent": {
     "name": "enemies",
     "path": "folders/enemies.yy",

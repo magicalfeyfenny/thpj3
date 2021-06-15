@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_player_deathbomb",
-  "duration": 0.0,
+  "soundFile": "snd_player_deathbomb.wav",
+  "duration": 3.178039,
   "parent": {
     "name": "player",
     "path": "folders/player.yy",

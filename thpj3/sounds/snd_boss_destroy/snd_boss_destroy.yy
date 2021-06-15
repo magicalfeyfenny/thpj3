@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_boss_destroy",
-  "duration": 0.0,
+  "soundFile": "snd_boss_destroy.wav",
+  "duration": 1.026678,
   "parent": {
     "name": "enemies",
     "path": "folders/enemies.yy",

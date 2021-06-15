@@ -38,7 +38,7 @@ function scr_pattern_fire( _pattern, _speed, _bullet ) {
 					speed = _speed;
 					friction = -.02 * obj_wriggle.hyper_tier;
 					direction = point_direction( x, y, obj_wriggle.x, obj_wriggle.y ) 
-					- (30 + 10 * obj_wriggle.hyper_tier) + ( i * (50 + 10 * obj_wriggle.hyper_tier) / (5 + obj_wriggle.hyper_tier * 2) );
+					- (25 + 10 * obj_wriggle.hyper_tier) + ( i * (50 + 10 * obj_wriggle.hyper_tier) / (5 + obj_wriggle.hyper_tier * 2) );
 				}
 			}
 			break;
@@ -51,7 +51,7 @@ function scr_pattern_fire( _pattern, _speed, _bullet ) {
 					speed = _speed - 1;
 					friction = -.02 * obj_wriggle.hyper_tier;
 					direction = point_direction( x, y, obj_wriggle.x, obj_wriggle.y ) 
-					- (10 + 10 * obj_wriggle.hyper_tier) + ( i * (20 + 10 * obj_wriggle.hyper_tier) / (5 + obj_wriggle.hyper_tier * 2) );
+					- (10 + 10 * obj_wriggle.hyper_tier) + ( i * (20 + 10 * obj_wriggle.hyper_tier) / (2 + obj_wriggle.hyper_tier * 2) );
 				}
 			}
 			for ( var i = 0; i < 3 + (obj_wriggle.hyper_tier * 2); i++ ) {
@@ -186,7 +186,7 @@ function scr_pattern_fire( _pattern, _speed, _bullet ) {
 						speed = _speed - 1;
 						friction = -.02 * obj_wriggle.hyper_tier;
 						direction = point_direction( x, y, obj_wriggle.x, obj_wriggle.y ) 
-						- (10 + 10 * obj_wriggle.hyper_tier) + ( i * (20 + 10 * obj_wriggle.hyper_tier) / (5 + obj_wriggle.hyper_tier * 2) ) 
+						- (10 + 10 * obj_wriggle.hyper_tier) + ( i * (20 + 10 * obj_wriggle.hyper_tier) / (2 + obj_wriggle.hyper_tier * 2) ) 
 						+ j * (360 / (6 + obj_wriggle.hyper_tier) ) + k;
 					}
 				}

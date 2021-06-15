@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 1.0,
+  "volume": 0.49,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_player_shot",
-  "duration": 0.0,
+  "soundFile": "snd_player_shot.wav",
+  "duration": 0.16754,
   "parent": {
     "name": "player",
     "path": "folders/player.yy",

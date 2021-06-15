@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_music_st1boss",
-  "duration": 0.0,
+  "soundFile": "snd_music_st1boss.wav",
+  "duration": 8.004274,
   "parent": {
     "name": "stage",
     "path": "folders/stage.yy",

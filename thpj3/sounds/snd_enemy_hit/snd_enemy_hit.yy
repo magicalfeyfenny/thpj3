@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_enemy_hit",
-  "duration": 0.0,
+  "soundFile": "snd_enemy_hit.wav",
+  "duration": 0.411349,
   "parent": {
     "name": "enemies",
     "path": "folders/enemies.yy",

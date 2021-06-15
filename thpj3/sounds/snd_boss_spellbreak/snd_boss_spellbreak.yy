@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_boss_spellbreak",
-  "duration": 0.0,
+  "soundFile": "snd_boss_spellbreak.wav",
+  "duration": 0.539059,
   "parent": {
     "name": "enemies",
     "path": "folders/enemies.yy",

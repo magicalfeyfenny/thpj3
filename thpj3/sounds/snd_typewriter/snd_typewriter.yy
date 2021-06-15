@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_typewriter",
-  "duration": 0.0,
+  "soundFile": "snd_typewriter.wav",
+  "duration": 0.283639,
   "parent": {
     "name": "dialogue",
     "path": "folders/dialogue.yy",

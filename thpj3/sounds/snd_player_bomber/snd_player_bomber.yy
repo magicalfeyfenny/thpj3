@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_player_bomber",
-  "duration": 0.0,
+  "soundFile": "snd_player_bomber.wav",
+  "duration": 0.666769,
   "parent": {
     "name": "player",
     "path": "folders/player.yy",

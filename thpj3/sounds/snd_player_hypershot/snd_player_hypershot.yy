@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_player_hypershot",
-  "duration": 0.0,
+  "soundFile": "snd_player_hypershot.wav",
+  "duration": 0.782868,
   "parent": {
     "name": "player",
     "path": "folders/player.yy",

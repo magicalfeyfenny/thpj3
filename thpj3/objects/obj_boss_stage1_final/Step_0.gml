@@ -104,6 +104,7 @@ if ( phase_mode == MODE_CHARGE ) {
 	invuln = true;
 	if ( !charge_timer ) {
 		phase_mode = MODE_ACTIVE;
+		audio_play_sound( snd_boss_laugh, 1, false);
 	}
 }
 
@@ -112,7 +113,7 @@ if ( phase_mode == MODE_CHAT ) {
 	invuln = true;
 	if ( !obj_dialogue.dialogue_mode ) {
 		audio_stop_sound( snd_music_stage1 );
-		audio_play_sound( snd_music_st1boss, 0, true );
+		audio_play_sound( snd_music_st1boss, 100, true );
 		charge_timer = BOSS_CHARGE_TIME;
 		phase_mode = MODE_CHARGE;
 	}

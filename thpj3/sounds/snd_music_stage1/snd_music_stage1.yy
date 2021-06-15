@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_music_stage1",
-  "duration": 0.0,
+  "soundFile": "snd_music_stage1.wav",
+  "duration": 63.4303055,
   "parent": {
     "name": "stage",
     "path": "folders/stage.yy",

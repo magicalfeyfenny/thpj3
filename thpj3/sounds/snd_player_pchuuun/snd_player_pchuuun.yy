@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_player_pchuuun",
-  "duration": 0.0,
+  "soundFile": "snd_player_pchuuun.wav",
+  "duration": 0.573889,
   "parent": {
     "name": "player",
     "path": "folders/player.yy",

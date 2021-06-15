@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_player_hyperactive",
-  "duration": 0.0,
+  "soundFile": "snd_player_hyperactive.wav",
+  "duration": 2.315385,
   "parent": {
     "name": "player",
     "path": "folders/player.yy",

@@ -4,4 +4,4 @@ counter = 0;
 
 title_created = 0;
 
-audio_play_sound( snd_music_title, 0, true );
+audio_play_sound( snd_music_title, 100, true );
