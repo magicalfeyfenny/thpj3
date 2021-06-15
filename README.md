@@ -8,7 +8,7 @@ this is a side-scrolling shoot-'em-up with a comedic tone featuring everyone's f
 ---
 
 ### Releases
-- https://magicalfeyfenny.itch.io/wriggles-imperishable-night jam entry release
+- https://magicalfeyfenny.itch.io/wriggles-unwriggleable-night jam entry release
 
 ### Build instructions
 - open the .yyp file in GameMaker Studio 2, select your target, and Build > Create Executable (CTRL + F8)  
